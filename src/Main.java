@@ -15,4 +15,6 @@ void main() {
     System.out.println("Is the full name equal to the second full name? " + isNameEqual);
 
     System.out.println(sessionTwo.getAge() * 2);
+
+    System.out.println("Testing git...");
 }
