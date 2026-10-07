@@ -2,6 +2,7 @@ import weeks.five.ProgrammingWorkshop;
 import weeks.five.RoboticsWorkshop;
 import weeks.five.Workshop;
 import weeks.one.SessionOne;
+import weeks.six.Students;
 import weeks.two.SessionTwo;
 import weeks.three.SessionThree;
 
@@ -57,39 +58,47 @@ public class Main {
 //        System.out.println("=================================================");
 
         // --- SEMANA 5 ---
-        System.out.println("-------------------------------------------------");
-        // Request to user the workshop number to run
-        System.out.println("📌 WEEK 5: WORKSHOP SELECTION");
-        System.out.println("1. Robotics Workshop");
-        System.out.println("2. Programming Workshop");
-        System.out.println("-------------------------------------------------");
+//        System.out.println("-------------------------------------------------");
+//        // Request to user the workshop number to run
+//        System.out.println("📌 WEEK 5: WORKSHOP SELECTION");
+//        System.out.println("1. Robotics Workshop");
+//        System.out.println("2. Programming Workshop");
+//        System.out.println("-------------------------------------------------");
+//
+//        int selectedWorkshopOption = 1; // Default to Robotics Workshop for demonstration
+//        Scanner scanner = new Scanner(System.in);
+//        selectedWorkshopOption = scanner.nextInt();
+//        Workshop selectedWorkshop;
+//        int requestedSeats = 0;
+//
+//        switch (selectedWorkshopOption) {
+//            case 1:
+//                selectedWorkshop = new RoboticsWorkshop("Robotcs AI Workshop", 5);
+//                break;
+//            case 2:
+//                selectedWorkshop = new ProgrammingWorkshop("Java Programming Workshop", 10);
+//                break;
+//            default:
+//                System.out.println("Invalid selection.");
+//                return;
+//        }
+//
+//        System.out.println("Enter the number of seats to reserve:");
+//        requestedSeats = scanner.nextInt();
+//
+//        selectedWorkshop.checkEnrollment(requestedSeats);
+//        selectedWorkshop.decreaseCapacity(requestedSeats);
+//
+//        //Display the outcome. For a valid selection, also show current availability
+//        System.out.println("Workshop: " + selectedWorkshop.title);
+//        System.out.println("Current capacity: " + selectedWorkshop.capacity);
 
-        int selectedWorkshopOption = 1; // Default to Robotics Workshop for demonstration
-        Scanner scanner = new Scanner(System.in);
-        selectedWorkshopOption = scanner.nextInt();
-        Workshop selectedWorkshop;
-        int requestedSeats = 0;
+        // --- SEMANA 6 ---
+        System.out.println("-------------------------------------------------");
+        Students students = new Students();
 
-        switch (selectedWorkshopOption) {
-            case 1:
-                selectedWorkshop = new RoboticsWorkshop("Robotcs AI Workshop", 5);
-                break;
-            case 2:
-                selectedWorkshop = new ProgrammingWorkshop("Java Programming Workshop", 10);
-                break;
-            default:
-                System.out.println("Invalid selection.");
-                return;
+        for (int i = 0; i < students.getTotalStudents(); i++) {
+            students.getOneStudent(i);
         }
-
-        System.out.println("Enter the number of seats to reserve:");
-        requestedSeats = scanner.nextInt();
-
-        selectedWorkshop.checkEnrollment(requestedSeats);
-        selectedWorkshop.decreaseCapacity(requestedSeats);
-
-        //Display the outcome. For a valid selection, also show current availability
-        System.out.println("Workshop: " + selectedWorkshop.title);
-        System.out.println("Current capacity: " + selectedWorkshop.capacity);
     }
 }
