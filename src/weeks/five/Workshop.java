@@ -1,9 +1,9 @@
 package weeks.five;
 
 public abstract class Workshop {
-    public String title;
-    public int capacity;
-    public int enrolled;
+    private final String title;
+    private int capacity;
+    private final int enrolled;
 
     public Workshop(String title, int capacity) {
         if (title == null || title.isEmpty() || capacity <= 0) {
@@ -27,5 +27,15 @@ public abstract class Workshop {
         if (requestedSeats > this.capacity) {
             throw new RuntimeException("Enrollment rejected.");
         }
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+    public  int getCapacity() {
+        return this.capacity;
+    }
+    public int getEnrolled() {
+        return this.enrolled;
     }
 }

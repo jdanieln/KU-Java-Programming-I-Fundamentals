@@ -1,7 +1,9 @@
 import weeks.five.ProgrammingWorkshop;
 import weeks.five.RoboticsWorkshop;
 import weeks.five.Workshop;
+import weeks.seven.Person;
 import weeks.one.SessionOne;
+import weeks.seven.PersonTwo;
 import weeks.six.Students;
 import weeks.two.SessionTwo;
 import weeks.three.SessionThree;
@@ -93,12 +95,80 @@ public class Main {
 //        System.out.println("Workshop: " + selectedWorkshop.title);
 //        System.out.println("Current capacity: " + selectedWorkshop.capacity);
 
-        // --- SEMANA 6 ---
-        System.out.println("-------------------------------------------------");
-        Students students = new Students();
+//        // --- SEMANA 6 ---
+//        System.out.println("-------------------------------------------------");
+//        Students students = new Students();
+//
+//        for (int i = 0; i < students.getTotalStudents(); i++) {
+//            students.getOneStudent(i);
+//        }
 
-        for (int i = 0; i < students.getTotalStudents(); i++) {
-            students.getOneStudent(i);
+        Workshop[] workshops = new Workshop[2];
+        workshops[0] = new RoboticsWorkshop("Robotics Workshop", 5);
+        workshops[1] = new ProgrammingWorkshop("Programming Workshop", 10);
+
+        for (Workshop workshop : workshops) {
+            System.out.println("Workshop: " + workshop.getTitle());
+            System.out.println("Fee per seat: $" + workshop.feePerSeat());
+            System.out.println();
         }
+
+        //Support Book, Report, and Quit. Repeat until Quit. Convert console input to
+        //whole numbers, handle invalid numeric input, and keep the application running.
+//        Scanner scanner = new Scanner(System.in);
+//        while (true) {
+//            System.out.println("Select an option:");
+//            System.out.println("1. Book a seat in Robotics Workshop");
+//            System.out.println("2. Book a seat in Programming Workshop");
+//            System.out.println("3. Report current availability");
+//            System.out.println("4. Quit");
+//            int option = scanner.nextInt();
+//
+//            switch (option) {
+//                case 1:
+//                    workshops[0].checkEnrollment(1);
+//                    workshops[0].decreaseCapacity(1);
+//                    System.out.println("Seat booked in Robotics Workshop.");
+//                    break;
+//                case 2:
+//                    workshops[1].checkEnrollment(1);
+//                    workshops[1].decreaseCapacity(1);
+//                    System.out.println("Seat booked in Programming Workshop.");
+//                    break;
+//                case 3:
+//                    for (Workshop workshop : workshops) {
+//                        System.out.println("Workshop: " + workshop.getTitle() + ", Current capacity: " + workshop.getCapacity());
+//                    }
+//                    break;
+//                case 4:
+//                    System.out.println("Exiting the application.");
+//                    return;
+//                default:
+//                    System.out.println("Invalid option. Please try again.");
+//            }
+//        }
+        //        // --- WEEK 7 ---
+
+//        Person personOne = new Person("Noel");
+//        PersonTwo personTwo = new PersonTwo("Noel");
+//
+//        System.out.println("Are personOne and personTwo equal? ");
+//        System.out.println(personOne.name == personTwo.name);
+//        System.out.println(personOne.name.equals(personTwo.name));
+
+        String nameOne = "Noel";
+        String nameTwo = new String("");
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a name for nameTwo: ");
+        nameTwo = input.nextLine();
+        System.out.println("Are nameOne and nameTwo equal? ");
+        System.out.println(nameOne == nameTwo);
+        System.out.println(nameTwo.equals(nameOne));
+        System.out.println("NameONe is " + nameOne + " and NameTwo is " + nameTwo);
+
+        String nameOneUppercase = nameOne.toUpperCase();
+        String nameTwoUppercase = nameTwo.toUpperCase();
+        System.out.println("nameOneUppercase is " + nameOneUppercase + " and nameTwoUppercase is " + nameTwoUppercase);
     }
 }
+
